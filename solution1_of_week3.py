@@ -5,7 +5,7 @@ class PersonalInfoManager:
     @staticmethod
     def load_data():
         try:
-            with open('data1.pickle', 'rb') as f:
+            with open('problem1_data_file.pickle', 'rb') as f:
                 personal_info = pickle.load(f)
         except FileNotFoundError:
             personal_info = {}    #initialize with an empty dictionary if file not exists
@@ -54,7 +54,7 @@ class PersonalInfoManager:
 
     @staticmethod
     def save_data(personal_info):
-        with open('data1.pickle', 'wb') as f:
+        with open('problem1_data_file.pickle', 'wb') as f:
             pickle.dump(personal_info, f)
 
 if __name__ == "__main__":
